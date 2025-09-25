@@ -118,11 +118,18 @@ header {
 }
 
 
-.btn-ghost{
+.btn-ghost-3{
   background:transparent;
   color:rgb(255, 255, 255);
   border:1px solid rgba(255, 255, 255, 0.352);
 }
+
+.btn-ghost{
+  background:transparent;
+  color:rgb(0, 0, 0);
+  border:1px solid rgba(255, 255, 255, 0.352);
+}
+
 .btn-ghost.active{
   background:#ffffff;
   color:#ff0000;
@@ -248,7 +255,7 @@ header {
   text-transform: uppercase;
   display: inline-flex;          /* ✅ flexbox for centering */
   align-items: center;           /* ✅ vertical centering */
-  justify-content: center;       /* ✅ horizontal centering */
+  justify-content: center;       
   padding: 16px 36px;
   line-height: 1.2;
   transition: all 0.3s ease;
