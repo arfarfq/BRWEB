@@ -1,0 +1,367 @@
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  color: #111;
+  line-height: 1.6;
+  background: #fff;
+
+  font-weight: 100;         /* thinnest standard weight */
+  letter-spacing: 0.08em;   /* open spacing for the tall/airy feel */
+  font-stretch: condensed;  /* narrows the letters, making them taller */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;        /* force ultra-thin */
+  letter-spacing: 0.15em;  /* keeps consistent tall/airy feel */
+  font-stretch: condensed;
+  text-transform: uppercase; /* optional, if you want everything like 'LATEST RELEASE' */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.container{max-width:1100px;margin:0 auto;padding:0 18px}
+h1,h2,h3{margin:0 0 12px}
+p{margin:0 0 12px}
+
+/* ---------- Header ---------- */
+header {
+  padding: 14px 0;
+  background: #fff;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #111;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;    /* vertically center everything */
+  gap: 20px;
+}
+
+/* Make social icons flex items and center them */
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  display: flex;          /* make the link a flex container */
+  align-items: center;    /* vertically center the image inside the link */
+}
+
+.social-icon img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  display: block;         /* remove baseline spacing */
+  margin: 0;              /* ensure no extra spacing */
+}
+
+.btn.btn-primary {
+  height: 39px;            /* match the social icon height (35px + 2px border*2) */
+  line-height: 1;
+  padding: 0 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;     /* vertically center text */
+  justify-content: center; /* horizontally center text */
+}
+
+
+.social-icon img:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
+
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 39px;          /* exact same height */
+  padding: 0 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  line-height: 1;
+  box-sizing: border-box;   /* ✅ makes borders fit inside */
+}
+
+/* Variants */
+.btn-primary {
+  background: #111;
+  color: #fff;
+  border: 1px solid transparent; /* keep consistent border box */
+}
+
+.btn-ghost-2 {
+  background: transparent;
+  color: #000000;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+}
+
+
+.btn-ghost{
+  background:transparent;
+  color:rgb(255, 255, 255);
+  border:1px solid rgba(255, 255, 255, 0.352);
+}
+.btn-ghost.active{
+  background:#ffffff;
+  color:#ff0000;
+}
+
+
+
+
+
+/* ---------- Hero ---------- */
+.hero{
+  min-height:82vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  color:#fff;
+  background: url('images/DSC01057-3Extend 3.PNG') center 30%/cover no-repeat;
+}
+
+.hero-producer{
+  min-height:88vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  color:#fff;
+  background: url('images/DSC00353.JPG') center 30%/cover no-repeat;
+}
+
+.hero-producer .hero-ctas {
+  position: absolute;
+  bottom: 5rem;       /* adjust spacing from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero {
+  position: relative; /* important so .hero-ctas can position within it */
+}
+
+
+.hero .artist-name{font-size:clamp(48px,8vw,100px);letter-spacing:0.6em;font-weight:150}
+.hero .tagline{font-size:clamp(14px,2.4vw,18px);opacity:0.95;margin-bottom:18px}
+.hero-ctas {
+  position: absolute;
+  bottom: 2rem;       /* adjust spacing from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* ---------- Sections ---------- */
+.section{padding:40px 0}
+.two-col{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
+
+/* ---------- Player ---------- */
+.player-card{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding:18px;
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,0.06);
+  background:#fbfbfb;
+}
+.toggle-buttons{display:flex;gap:12px;margin-bottom:12px}
+
+/* ---------- Discography ---------- */
+.discography-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-top:16px;
+}
+.album{
+  padding:14px;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,0.06);
+  background:#fff;
+}
+.album .thumb{
+  height:160px;
+  border-radius:8px;
+  background:#ccc;
+  display:grid;
+  place-items:center;
+  font-weight:700;
+  color:#666;
+  margin-bottom:12px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #111;   /* dark footer */
+  color: #fff;
+}
+
+.site-footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  /* vertically center content */
+  gap: 1.5rem;              /* space between items */
+  min-height: 250px;        /* ensure enough space */
+}
+
+.site-footer .btn-primary {
+  background: #fff;
+  color: #000;
+  border: 2px solid #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-transform: uppercase;
+  display: inline-flex;          /* ✅ flexbox for centering */
+  align-items: center;           /* ✅ vertical centering */
+  justify-content: center;       /* ✅ horizontal centering */
+  padding: 16px 36px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+.site-footer .btn-primary:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+  transform: scale(1.05);
+}
+
+.site-footer .copyright {
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:720px){
+  .two-col{grid-template-columns:1fr}
+}
+
+  .carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .album {
+    flex: 0 0 calc(100% / 3); /* show 3 items */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .album-cover {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .carousel-btn.prev { left: 10px; }
+  .carousel-btn.next { right: 10px; }
+
+  .carousel-btn:hover {
+    background: rgba(0,0,0,0.8);  }
+
+
+
+.discography-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.discography-header h2 {
+  margin: 0;
+}
+
+.discography-header .btn-primary {
+  font-size: 1rem;       /* same style as Listen Now button */
+  padding: 12px 24px;
+}
+
+.background-image-wrapper {
+  background: url('images/DSC01005.JPG') center 48% no-repeat;
+  color: white;
+}
+
+.background-image-wrapper-producer {
+  background: url('images/DSC00491.JPG') center 15% no-repeat;
+  color: white;
+}
+
+.album strong {
+    font-size: 1rem;
+    color: #000000; /* subtle grey for the small text */
+}
+
+.album small {
+
+    font-size: 0.875rem;
+    color: #3e3e3e; /* subtle grey for the small text */
+}
+
+
+
+
+
